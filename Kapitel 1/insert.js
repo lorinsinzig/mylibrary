@@ -1,6 +1,4 @@
-// 1.5 - Physisches Datenmodell
 // 1.6 - Einfügen von Daten
-use mylibrary
 
 // Populate Kunde collection
 db.kunden.insertMany([
