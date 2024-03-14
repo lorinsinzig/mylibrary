@@ -10,7 +10,6 @@ db.kunden.insertMany([
     "vorname": "Max",
     "email": "max.muster@example.com",
     "geburtsdatum": ISODate("1988-03-15"),
-    "geschlecht": "männlich",
     "strasse": "Eichenweg 7",
     "ort": "Stadt",
     "plz": "34567",
@@ -27,7 +26,6 @@ db.kunden.insertMany([
     "strasse": "Ahornstraße 14",
     "ort": "Dorf",
     "plz": "45678",
-    "land": "Deutschland",
     "bemerkung": "Stammkunde"
   },
   {
@@ -52,7 +50,8 @@ db.kunden.insertMany([
     "strasse": "Birkenweg 5",
     "ort": "Dorf",
     "plz": "67890",
-    "land": "Deutschland"
+    "land": "Deutschland",
+    "beruf": "Informatiker"
   },
   {
     "_id": ObjectId("65e03b5e1aa6382bf1eed252"),
@@ -64,12 +63,12 @@ db.kunden.insertMany([
     "strasse": "Fichtenstraße 3",
     "ort": "Stadt",
     "plz": "78901",
-    "land": "Deutschland"
+    "land": "Deutschland",
+    "telefon": "+0987654321"
   },
   {
     "_id": ObjectId("65e03b651aa6382bf1eed253"),
     "name": "Koch",
-    "vorname": "Sarah",
     "email": "sarah.koch@example.com",
     "geburtsdatum": ISODate("1987-02-10"),
     "geschlecht": "weiblich",
@@ -86,9 +85,6 @@ db.kunden.insertMany([
     "geburtsdatum": ISODate("1978-08-05"),
     "geschlecht": "männlich",
     "strasse": "Buchenstraße 8",
-    "ort": "Stadt",
-    "plz": "90123",
-    "land": "Deutschland"
   },
   {
     "_id": ObjectId("65e03b771aa6382bf1eed255"),
@@ -100,7 +96,8 @@ db.kunden.insertMany([
     "strasse": "Eschenweg 19",
     "ort": "Dorf",
     "plz": "12345",
-    "land": "Deutschland"
+    "land": "Deutschland",
+    "Bemerkung": "Schlechte Zahlungsmoral"
   },
   {
     "_id": ObjectId("65e03b821aa6382bf1eed256"),
@@ -109,7 +106,6 @@ db.kunden.insertMany([
     "email": "markus.schneider@example.com",
     "geburtsdatum": ISODate("1983-12-18"),
     "geschlecht": "männlich",
-    "strasse": "Ahornweg 6",
     "ort": "Stadt",
     "plz": "23456",
     "land": "Deutschland"
@@ -152,7 +148,6 @@ db.kunden.insertMany([
   },
   {
     "_id": ObjectId("65e03bb81aa6382bf1eed25a"),
-    "name": "Beck",
     "vorname": "Alexander",
     "email": "alexander.beck@example.com",
     "geburtsdatum": ISODate("1982-11-27"),
@@ -172,7 +167,8 @@ db.kunden.insertMany([
     "strasse": "Tannenweg 4",
     "ort": "Dorf",
     "plz": "78901",
-    "land": "Deutschland"
+    "land": "Deutschland",
+    "Mahnung": "2023-07-21"
   },
   {
     "_id": ObjectId("65e03bd01aa6382bf1eed25c"),
@@ -184,7 +180,8 @@ db.kunden.insertMany([
     "strasse": "Ahornweg 22",
     "ort": "Stadt",
     "plz": "89012",
-    "land": "Deutschland"
+    "land": "Deutschland",
+    "Vorbestrafung": "Betrunken Autofahren"
   },
   {
     "_id": ObjectId("65e03bdc1aa6382bf1eed25d"),
@@ -259,7 +256,8 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId("65e03fef0e1130e4f52e737f"),
     "seitenanzahl": 208,
-    "veröffentlichkeitsdatum": ISODate("1915-10-15")
+    "veröffentlichkeitsdatum": ISODate("1915-10-15"),
+    "bewertung": 4.5
   },
   {
     "_id": ObjectId("65e0438499e2aa41003bf4df"),
@@ -269,7 +267,9 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId("65e03fef0e1130e4f52e737f"),
     "seitenanzahl": 218,
-    "veröffentlichkeitsdatum": ISODate("1808-09-01")
+    "veröffentlichkeitsdatum": ISODate("1808-09-01"),
+    "bewertung": 4.8,
+    "verlag": "Reclam"
   },
   {
     "_id": ObjectId("65e0438e99e2aa41003bf4e1"),
@@ -279,7 +279,8 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId("65e03fef0e1130e4f52e737f"),
     "seitenanzahl": 366,
-    "veröffentlichkeitsdatum": ISODate("1895-03-15")
+    "veröffentlichkeitsdatum": ISODate("1895-03-15"),
+    "verlag": "Rowohlt"
   },
   {
     "_id": ObjectId("65e0439599e2aa41003bf4e2"),
@@ -289,7 +290,8 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 576,
-    "veröffentlichkeitsdatum": ISODate("1959-08-01")
+    "veröffentlichkeitsdatum": ISODate("1959-08-01"),
+    "bewertung": 4.2
   },
   {
     "_id": ObjectId("65e0439f99e2aa41003bf4e3"),
@@ -299,7 +301,8 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 320,
-    "veröffentlichkeitsdatum": ISODate("1927-09-15")
+    "veröffentlichkeitsdatum": ISODate("1927-09-15"),
+    "verlag": "Fischer"
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4e4"),
@@ -309,7 +312,8 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 160,
-    "veröffentlichkeitsdatum": ISODate("1922-12-01")
+    "veröffentlichkeitsdatum": ISODate("1922-12-01"),
+    "verlag": "Suhrkamp"
   },
   {
     "_id": ObjectId("65e043b299e2aa41003bf4e5"),
@@ -319,7 +323,9 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 912,
-    "veröffentlichkeitsdatum": ISODate("1924-10-01")
+    "veröffentlichkeitsdatum": ISODate("1924-10-01"),
+    "bewertung": 4.7,
+    "verlag": "Fischer"
   },
   {
     "_id": ObjectId("65e043be99e2aa41003bf4e6"),
@@ -327,9 +333,9 @@ db.buecher.insertMany([
     "titel": "Die Räuber",
     "autor_id": ObjectId("65e043a799e2aa41003bf4e0"),
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
-    "sprache_id": ObjectId(),
     "seitenanzahl": 208,
-    "veröffentlichkeitsdatum": ISODate("1781-01-13")
+    "veröffentlichkeitsdatum": ISODate("1781-01-13"),
+    "verlag": "Piper"
   },
   {
     "_id": ObjectId("65e043c799e2aa41003bf4e7"),
@@ -339,7 +345,8 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 128,
-    "veröffentlichkeitsdatum": ISODate("1779-12-14")
+    "veröffentlichkeitsdatum": ISODate("1779-12-14"),
+    "bewertung": 4.6
   },
   {
     "_id": ObjectId("65e043cf99e2aa41003bf4e8"),
@@ -349,7 +356,8 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 136,
-    "veröffentlichkeitsdatum": ISODate("1912-10-15")
+    "veröffentlichkeitsdatum": ISODate("1912-10-15"),
+    "verlag": "Rowohlt"
   },
   {
     "_id": ObjectId("65e043d799e2aa41003bf4e9"),
@@ -359,7 +367,9 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 352,
-    "veröffentlichkeitsdatum": ISODate("1925-04-26")
+    "veröffentlichkeitsdatum": ISODate("1925-04-26"),
+    "bewertung": 4.4,
+    "verlag": "Reclam"
   },
   {
     "_id": ObjectId("65e043e199e2aa41003bf4ea"),
@@ -369,7 +379,8 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 160,
-    "veröffentlichkeitsdatum": ISODate("1774-09-14")
+    "veröffentlichkeitsdatum": ISODate("1774-09-14"),
+    "bewertung": 4.3
   },
   {
     "_id": ObjectId("65e043eb99e2aa41003bf4eb"),
@@ -379,7 +390,9 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 246,
-    "veröffentlichkeitsdatum": ISODate("1815-05-07")
+    "veröffentlichkeitsdatum": ISODate("1815-05-07"),
+    "bewertung": 4.2,
+    "verlag": "Suhrkamp"
   },
   {
     "_id": ObjectId("65e043f299e2aa41003bf4ec"),
@@ -389,7 +402,8 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 320,
-    "veröffentlichkeitsdatum": ISODate("1929-10-01")
+    "veröffentlichkeitsdatum": ISODate("1929-10-01"),
+    "verlag": "Fischer"
   },
   {
     "_id": ObjectId("65e043f899e2aa41003bf4ed"),
@@ -399,7 +413,8 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 448,
-    "veröffentlichkeitsdatum": ISODate("1979-09-01")
+    "veröffentlichkeitsdatum": ISODate("1979-09-01"),
+    "verlag": "Thienemann"
   },
   {
     "_id": ObjectId("65e043ff99e2aa41003bf4ee"),
@@ -409,7 +424,9 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 192,
-    "veröffentlichkeitsdatum": ISODate("1814-12-14")
+    "veröffentlichkeitsdatum": ISODate("1814-12-14"),
+    "bewertung": 4.6,
+    "verlag": "Insel"
   },
   {
     "_id": ObjectId("65e0440699e2aa41003bf4ef"),
@@ -419,7 +436,9 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 544,
-    "veröffentlichkeitsdatum": ISODate("1983-08-01")
+    "veröffentlichkeitsdatum": ISODate("1983-08-01"),
+    "bewertung": 4.5,
+    "verlag": "dtv"
   },
   {
     "_id": ObjectId("65e0440c99e2aa41003bf4f0"),
@@ -429,7 +448,9 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 176,
-    "veröffentlichkeitsdatum": ISODate("1977-09-15")
+    "veröffentlichkeitsdatum": ISODate("1977-09-15"),
+    "bewertung": 4.7,
+    "verlag": "Suhrkamp"
   },
   {
     "_id": ObjectId("65e0441499e2aa41003bf4f1"),
@@ -439,7 +460,8 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 128,
-    "veröffentlichkeitsdatum": ISODate("1956-01-01")
+    "veröffentlichkeitsdatum": ISODate("1956-01-01"),
+    "verlag": "Rowohlt"
   },
   {
     "_id": ObjectId("65e0441a99e2aa41003bf4f2"),
@@ -449,7 +471,29 @@ db.buecher.insertMany([
     "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
     "sprache_id": ObjectId(),
     "seitenanzahl": 240,
-    "veröffentlichkeitsdatum": ISODate("1995-09-01")
+    "veröffentlichkeitsdatum": ISODate("1995-09-01"),
+    "bewertung": 4.4,
+    "verlag": "Diogenes"
+  },
+  {
+    "_id": ObjectId("65e0442199e2aa41003bf4f3"),
+    "iban": "978-3-430-34567-4",
+    "titel": "Parzival",
+    "autor_id": ObjectId("65e043a799e2aa41003bf4e0"),
+    "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
+    "seitenanzahl": 384,
+    "veröffentlichkeitsdatum": ISODate("1205-01-01"),
+    "verlag": "Reclam"
+  },
+  {
+    "_id": ObjectId("65e0442699e2aa41003bf4f4"),
+    "iban": "978-3-530-45678-3",
+    "titel": "Erec",
+    "autor_id": ObjectId("65e043a799e2aa41003bf4e0"),
+    "genre_id": ObjectId("65e03f52d3923867b055a0a9"),
+    "seitenanzahl": 376,
+    "veröffentlichkeitsdatum": ISODate("1170-01-01"),
+    "verlag": "Piper"
   }
 ]);
 
@@ -461,140 +505,138 @@ db.autoren.insertMany([
     "name": "Goethe",
     "vorname": "Johann Wolfgang von",
     "geburtsjahr": 1749,
-    "land": "Deutschland"
+    "land": "Deutschland",
+    "bekannteste_werke": ["Faust I", "Faust II", "Die Leiden des jungen Werther", "Iphigenie auf Tauris"]
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4e1"),
     "name": "Hesse",
     "vorname": "Hermann",
     "geburtsjahr": 1877,
-    "land": "Deutschland"
+    "land": "Deutschland",
+    "bekannteste_werke": ["Der Steppenwolf", "Siddhartha", "Der Glasperlenspieler"]
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4e2"),
     "name": "Mann",
     "vorname": "Thomas",
     "geburtsjahr": 1875,
-    "land": "Deutschland"
+    "land": "Deutschland",
+    "bekannteste_werke": ["Buddenbrooks", "Der Zauberberg", "Der Tod in Venedig"]
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4e3"),
     "name": "Kafka",
     "vorname": "Franz",
     "geburtsjahr": 1883,
-    "land": "Österreich-Ungarn"
+    "land": "Österreich-Ungarn",
+    "bekannteste_werke": ["Der Prozess", "Die Verwandlung", "Das Schloss"]
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4e4"),
     "name": "Tolstoi",
     "vorname": "Leo",
     "geburtsjahr": 1828,
-    "land": "Russland"
+    "land": "Russland",
+    "bekannteste_werke": ["Krieg und Frieden", "Anna Karenina", "Auferstehung"],
+    "preise": ["Nobelpreis für Literatur (1904)"]
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4e5"),
     "name": "Dostojewski",
     "vorname": "Fjodor",
     "geburtsjahr": 1821,
-    "land": "Russland"
+    "land": "Russland",
+    "bekannteste_werke": ["Schuld und Sühne", "Die Brüder Karamasow", "Der Idiot"],
+    "preise": ["Nobelpreis für Literatur (nicht erhalten)"]
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4e6"),
     "name": "Orwell",
     "vorname": "George",
     "geburtsjahr": 1903,
-    "land": "Vereinigtes Königreich"
+    "land": "Vereinigtes Königreich",
+    "bekannteste_werke": ["1984", "Farm der Tiere", "Eine Pfarrerstochter"],
+    "preise": ["Order of the British Empire"]
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4e7"),
     "name": "Camus",
     "vorname": "Albert",
     "geburtsjahr": 1913,
-    "land": "Frankreich"
+    "land": "Frankreich",
+    "bekannteste_werke": ["Der Fremde", "Die Pest", "Der Mythos von Sisyphos"],
+    "preise": ["Nobelpreis für Literatur (1957)"]
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4e8"),
     "name": "Hemingway",
     "vorname": "Ernest",
     "geburtsjahr": 1899,
-    "land": "Vereinigte Staaten"
+    "land": "Vereinigte Staaten",
+    "bekannteste_werke": ["Der alte Mann und das Meer", "Fiesta", "In einem anderen Land"],
+    "preise": ["Nobelpreis für Literatur (1954)"]
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4e9"),
     "name": "Steinbeck",
     "vorname": "John",
     "geburtsjahr": 1902,
-    "land": "Vereinigte Staaten"
+    "land": "Vereinigte Staaten",
+    "bekannteste_werke": ["Die Früchte des Zorns", "Von Mäusen und Menschen", "Jenseits von Eden"]
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4ea"),
     "name": "Dickens",
     "vorname": "Charles",
     "geburtsjahr": 1812,
-    "land": "Vereinigtes Königreich"
+    "land": "Vereinigtes Königreich",
+    "bekannteste_werke": ["Eine Weihnachtsgeschichte", "David Copperfield", "Oliver Twist"],
+    "preise": ["n/a"]
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4eb"),
     "name": "Verne",
     "vorname": "Jules",
     "geburtsjahr": 1828,
-    "land": "Frankreich"
+    "land": "Frankreich",
+    "bekannteste_werke": ["Reise um die Erde in 80 Tagen", "20.000 Meilen unter dem Meer", "Die Reise zum Mittelpunkt der Erde"],
+    "preise": ["n/a"]
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4ec"),
     "name": "Dumas",
     "vorname": "Alexandre",
     "geburtsjahr": 1802,
-    "land": "Frankreich"
+    "land": "Frankreich",
+    "bekannteste_werke": ["Die drei Musketiere", "Der Graf von Monte Christo", "Die Kameliendame"],
+    "preise": ["n/a"]
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4ed"),
     "name": "Wilde",
     "vorname": "Oscar",
     "geburtsjahr": 1854,
-    "land": "Irland"
+    "land": "Irland",
+    "bekannteste_werke": ["Das Bildnis des Dorian Gray", "Der glückliche Prinz", "Ein Idealist"],
+    "preise": ["n/a"]
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4ee"),
     "name": "Borges",
     "vorname": "Jorge Luis",
     "geburtsjahr": 1899,
-    "land": "Argentinien"
+    "land": "Argentinien",
+    "bekannteste_werke": ["Fiktionen", "Der Aleph", "Die Biblothek von Babel"],
+    "preise": ["n/a"]
   },
   {
     "_id": ObjectId("65e043a799e2aa41003bf4ef"),
     "name": "Poe",
     "vorname": "Edgar Allan",
     "geburtsjahr": 1809,
-    "land": "Vereinigte Staaten"
-  },
-  {
-    "_id": ObjectId("65e043a799e2aa41003bf4f0"),
-    "name": "Twain",
-    "vorname": "Mark",
-    "geburtsjahr": 1835,
-    "land": "Vereinigte Staaten"
-  },
-  {
-    "_id": ObjectId("65e043a799e2aa41003bf4f1"),
-    "name": "Hugo",
-    "vorname": "Victor",
-    "geburtsjahr": 1802,
-    "land": "Frankreich"
-  },
-  {
-    "_id": ObjectId("65e043a799e2aa41003bf4f2"),
-    "name": "Shakespeare",
-    "vorname": "William",
-    "geburtsjahr": 1564,
-    "land": "Vereinigtes Königreich"
-  },
-  {
-    "_id": ObjectId("65e043a799e2aa41003bf4f3"),
-    "name": "Homer",
-    "vorname": "",
-    "geburtsjahr": "ca. 8. Jh. v. Chr.",
-    "land": "Griechenland"
+    "land": "Vereinigte Staaten",
+    "bekannteste_werke": ["Der Rabe", "Die Maske des Roten Todes", "Das verräterische Herz"]
   }
 ]);
 
