@@ -20,7 +20,7 @@ db.sprachen.find();
 db.genres.find();
 
 // Book by autor
-db.buecher.find({"autor_id": ObjectId("65e03b5389a9a5a25f2ba28b")});
+db.buecher.find({"autor_id": ObjectId("65e043a799e2aa41003bf4ea")});
 
 // Book age > 30
 db.kunden.find({"geburtsdatum": {$lt: new Date("1994-02-29")}});
