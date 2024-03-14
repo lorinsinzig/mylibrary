@@ -20,7 +20,8 @@ db.kunden.insertMany([
     "strasse": "Musterstraße 123",
     "ort": "Musterstadt",
     "plz": "12345",
-    "land": "Deutschland"
+    "land": "Deutschland",
+    "telefon": "+1234567890" // Added telefon attribute
   },
   {
     "_id": ObjectId(),
@@ -32,7 +33,8 @@ db.kunden.insertMany([
     "strasse": "Hauptstraße 456",
     "ort": "Stadt",
     "plz": "54321",
-    "land": "Deutschland"
+    "land": "Deutschland",
+    "bemerkung": "Mehrmals negative Erfahrungen" // Added bemerkung attribute
   },
   {
     "_id": ObjectId(),
@@ -227,6 +229,16 @@ db.sprachen.deleteOne({ "sprache": "Spanisch" });
 
 db.genres.deleteOne({ "name": "Krimi" });
 
+
+/////////////////////
+// 1.09
+///////////////////
+//Entität 1
+db.kunden.findOne({"telefon": "+1234567890"});
+//Entität 2
+db.kunden.findOne({"bemerkung": "Mehrmals negative Erfahrungen"})
+
+
 /////////////////////
 // 1.10
 ///////////////////
@@ -263,13 +275,3 @@ db.buecher.find({"veröffentlichkeitsdatum": {$gt: new ISODate("2000-01-01")}})
 
 // Book sorted by number of pages
 db.buecher.find().sort({"seitenanzahl": -1})
-
-
-/////////////////////
-// 1.09
-///////////////////
-//Entität 1
-db.personen.findOne({"telefon": "+1234567890"});
-//Entität 2
-db.personen.findOne({"bemerkung": "Mehrmals negative Erfahrungen"})
-
