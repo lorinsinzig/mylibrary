@@ -478,7 +478,7 @@ db.buecher.insertMany([
 ]);
 
 // Populate Autor collection
-[
+db.autoren.insertMany([
   {
     "_id": ObjectId("65e043a799e2aa41003bf4e0"),
     "Name": "Goethe",
