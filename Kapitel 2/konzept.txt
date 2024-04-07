@@ -1,0 +1,10 @@
+Konzept für Zugriffsberechtigungen
+Benutzer (Users):
+Admin:
+Vollständiger Zugriff auf alle Datenbanken und Kollektionen.
+Kann Benutzer hinzufügen, entfernen und deren Berechtigungen verwalten.
+
+
+Manager:
+Kann Lese-, Schreib- und Aktualisierungsoperationen in allen Datenbanken und Kollektionen durchführen.
+Kann keine Benutzer verwalten.
